@@ -1,6 +1,6 @@
 ---
 date: 2026-09-16
-title: CSS max-width is not a resized image
+title: Today AI Learned: CSS max-width is not a resized image
 type: reviewed
 tags: [hubspot, images, performance]
 proof:

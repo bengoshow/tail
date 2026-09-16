@@ -27,13 +27,13 @@ Writeups follow the playbook shape: Problem → Decision → Check → Result, p
 ## Check
 
 - Skill installs to `~/.cursor/skills/tail/` and appears as `/tail`
-- A writeup lands under `til/` with the required sections
+- A writeup lands under `tail/` with the required sections
 - `DECISION-LOG.md` gains a matching row with a real link
 - Secrets and private URLs are scrubbed before commit
 
 ## Result
 
-This repository is the Tail home: versioned skill source, templates, decision log, and TIL entries. The example entry is this file.
+This repository is the Tail home: versioned skill source, templates, decision log, and TAIL entries. The example entry is this file.
 
 ## Reuse
 

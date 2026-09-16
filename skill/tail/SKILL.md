@@ -3,7 +3,7 @@ name: tail
 description: >-
   Summarize the current conversation into a Today AI Learned (/tail) writeup
   and post it to the configured Tail journal repo. Use when the user runs /tail,
-  asks to write a TIL, or wants to capture what they learned, reviewed, or fixed
+  asks to write a TAIL, or wants to capture what they learned, reviewed, or fixed
   while working with AI.
 disable-model-invocation: true
 ---
@@ -15,7 +15,7 @@ Turn the current conversation into one public, checkable writeup and commit it t
 ## When to use
 
 - User invokes `/tail`
-- User asks to post a Today AI Learned / TIL / decision log entry from this chat
+- User asks to post a Today AI Learned / TAIL / decision log entry from this chat
 - User wants to capture something they **learned**, **reviewed** (or influenced), or **fixed**
 
 Do **not** run this skill unless the user explicitly asked for it.
@@ -46,7 +46,7 @@ Never treat the *current working project* as the Tail journal unless its absolut
 ## Workflow
 
 1. **Load the template and shapes**
-   - Prefer `repoPath/templates/til.md` if it exists.
+   - Prefer `repoPath/templates/tail.md` if it exists.
    - Otherwise use the copy under this skill's references, or the shapes in `references/playbook-shapes.md`.
 
 2. **Pick one primary lesson** from the conversation:
@@ -57,7 +57,7 @@ Never treat the *current working project* as the Tail journal unless its absolut
    Prefer judgement over a feature dump. One entry, one decision.
 
 3. **Draft the writeup**
-   - Filename: `til/YYYY-MM-DD-slug.md` (UTC or local date; kebab-case slug from the title).
+   - Filename: `tail/YYYY-MM-DD-slug.md` (UTC or local date; kebab-case slug from the title).
    - Frontmatter: `date`, `title`, `type`, optional `tags`, optional `proof` links.
    - Body sections in order: **Problem**, **Decision**, **Check**, **Result**, optional **Reuse**.
    - Optional **Social draft** footer (hook → story → fix/proof → takeaway).
@@ -70,11 +70,11 @@ Never treat the *current working project* as the Tail journal unless its absolut
 
 5. **On confirm, publish**
    - Ensure `repoPath` is clean enough to work in: `git status`, fetch if needed, checkout `branch`.
-   - Write the file to `repoPath/til/YYYY-MM-DD-slug.md`.
+   - Write the file to `repoPath/tail/YYYY-MM-DD-slug.md`.
    - Append one row to `repoPath/DECISION-LOG.md`:
-     `| YYYY-MM-DD | Short decision summary | [til/YYYY-MM-DD-slug.md](til/YYYY-MM-DD-slug.md) |`
+     `| YYYY-MM-DD | Short decision summary | [tail/YYYY-MM-DD-slug.md](tail/YYYY-MM-DD-slug.md) |`
    - Stage only those journal files (not unrelated dirty files in the Tail repo).
-   - Commit with a message like: `til: <title>`
+   - Commit with a message like: `Today AI Learned: <title>`
    - Push to `remote` / `branch`.
    - If push fails (auth, no remote, diverged history), report the error and leave the local commit in place with recovery steps—do not force-push unless the user explicitly asks.
 
@@ -97,6 +97,6 @@ Before posting, the entry should pass:
 - Explicit invocation only.
 - One writeup per `/tail` run unless the user asks for more.
 - Do not modify files outside `repoPath` for publishing.
-- Do not overwrite existing `til/*.md` files; pick a new slug if the name collides.
+- Do not overwrite existing `tail/*.md` files; pick a new slug if the name collides.
 - Do not co-author commits or add trailer credits unless the user asks.
 - Keep the tone concrete and engineering-first — no hype, no "AI is magic".

@@ -60,9 +60,9 @@ Reuse: …
 ## Decision log row
 
 ```markdown
-| YYYY-MM-DD | Short decision summary | [til/YYYY-MM-DD-slug.md](til/YYYY-MM-DD-slug.md) |
+| YYYY-MM-DD | Short decision summary | [tail/YYYY-MM-DD-slug.md](tail/YYYY-MM-DD-slug.md) |
 ```
 
 ## Filename
 
-`til/YYYY-MM-DD-slug.md` — kebab-case slug from the title; if taken, append `-2`, `-3`, etc.
+`tail/YYYY-MM-DD-slug.md` — kebab-case slug from the title; if taken, append `-2`, `-3`, etc.

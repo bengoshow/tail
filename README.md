@@ -8,9 +8,9 @@ Working code is cheap. What still matters is what you kept, changed, or rejected
 
 | Path | Purpose |
 | --- | --- |
-| [`til/`](til/) | Dated Today AI Learned writeups |
+| [`tail/`](tail/) | Dated Today AI Learned writeups |
 | [`DECISION-LOG.md`](DECISION-LOG.md) | Short table of decisions with links to proof |
-| [`templates/til.md`](templates/til.md) | Canonical writeup template |
+| [`templates/tail.md`](templates/tail.md) | Canonical writeup template |
 | [`skill/tail/`](skill/tail/) | Versioned Cursor skill source |
 
 ## Install the `/tail` skill globally
@@ -53,7 +53,7 @@ cp -R skill/tail/* ~/.cursor/skills/tail/
 1. You finish a session where you learned something, influenced direction in review, or fixed agent output.
 2. Run `/tail` (explicit only — it does not auto-fire).
 3. The agent drafts one writeup from the conversation using the template.
-4. After you confirm (or if you already said to post/ship), it writes `til/YYYY-MM-DD-slug.md`, appends a decision-log row, commits, and pushes.
+4. After you confirm (or if you already said to post/ship), it writes `tail/YYYY-MM-DD-slug.md`, appends a decision-log row, commits, and pushes.
 
 Entry types:
 
