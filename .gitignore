@@ -1,0 +1,7 @@
+# Local / generated
+uploads/
+agent-tools/
+.DS_Store
+
+# Skill local config (install copies this from the example)
+skill/tail/config.json
